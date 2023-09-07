@@ -1,0 +1,40 @@
+
+    /* nav cel */
+.nav-pc{
+display: none;
+}        
+
+  /* nav pc */ 
+    
+@media screen and (min-width:990px){
+         
+.nav-cel{
+    display: none;
+}
+.nav-pc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 40000;
+    background-color: $main-color;
+        ul{
+            display: flex; 
+            list-style: none;
+            align-items: center;
+                li{
+                    margin: 0.2rem 5rem;
+                    font-size: 1.2rem;
+                        &:hover{
+                            transform: scale(1.2);
+                            transition: all 0.5s;
+                    }
+                        a{
+                            text-decoration: none;
+                            color: $second-color;      
+                }
+            }  
+        }
+    }
+}

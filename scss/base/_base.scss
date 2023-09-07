@@ -1,0 +1,11 @@
+body{
+    background-image: url(../multimedia/p.jpg);
+     overflow-x: hidden;
+     min-height: 100vh;
+     width: 100%;
+        h1{
+            @extend %color;
+            margin: 0;
+        }
+
+} 

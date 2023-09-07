@@ -1,0 +1,26 @@
+// abstracts
+@import './abstracts/variables';
+@import './abstracts/extend';
+@import './abstracts/mixin';
+
+/* reset */
+@import './base/resets';
+
+/* estilos generales */
+@import './base/base';
+
+//estructura con grid
+@import './base/grid';
+
+//main
+@import './layout/main';
+
+//nav
+@import './layout/nav';
+
+//footer
+@import './layout/footer';
+
+
+    
+ 

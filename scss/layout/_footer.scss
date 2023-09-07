@@ -1,0 +1,10 @@
+/* solo footer */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @extend %color;
+    text-align: center;
+} 

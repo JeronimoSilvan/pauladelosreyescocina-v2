@@ -1,0 +1,38 @@
+ 
+/* estructura cel */
+
+#page{
+    @include grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer" ;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 2fr 1fr 5rem ;
+        header{
+            grid-area: header;
+    }
+        nav{
+            grid-area: nav;  
+    }
+        main{
+            grid-area: main;  
+    }
+}
+/* estructura de pc */
+
+@media screen and (min-width:990px){
+
+#page{
+        @include grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer" ;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 2fr 1fr 5rem ;
+    }
+}
+ 
