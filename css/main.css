@@ -1,6 +1,6 @@
 body h1, footer {
-  background-color: #F8F9FA;
-  color: #80203B; }
+  background-color: #e4c5c4;
+  color: #000; }
 
 /* reset */
 * {
@@ -57,7 +57,7 @@ body {
   margin-right: 2.5rem; }
   .principal ul li {
     list-style: none;
-    color: #80203B; }
+    color: #000; }
 
 /* pag quiensoy celu */
 .cocinera {
@@ -72,11 +72,13 @@ body {
   margin-top: 5rem; }
   .principal-dos .cocinera {
     height: 20rem; }
-  .principal-dos .texto p {
-    margin-top: 1.2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    color: #80203B; }
+  .principal-dos .texto {
+    text-align: center; }
+    .principal-dos .texto p {
+      margin-top: 1.7rem;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      color: #000; }
 
 /* pagina menu celu */
 .menu {
@@ -86,15 +88,16 @@ body {
   place-items: center;
   gap: 1rem; }
   .menu div {
-    height: 24rem;
-    width: 14rem; }
+    height: 90%;
+    width: 60%; }
     .menu div img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      margin-top: 1rem; }
+      margin-top: 2rem; }
 
-.carta-cinco, .carta-seis {
+.carta-cinco,
+.carta-seis {
   display: none; }
 
 /* pagina galeria celu */
@@ -102,16 +105,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  place-items: center;
-  gap: 1rem; }
+  place-items: center; }
   .galeria div {
     object-fit: cover;
-    height: 15rem;
-    width: 11rem; }
+    height: 80%;
+    width: 50%; }
     .galeria div img {
       height: 100%;
       width: 100%;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       object-fit: cover; }
 
 /* pagina redes celu */
@@ -126,85 +128,132 @@ body {
     display: none; }
   .redes a {
     text-decoration: none;
-    color: #80203B;
+    color: #000;
     font-size: 2rem; }
 
-/* pag index pc */
-@media screen and (min-width: 990px) {
+/* pag index tablet */
+@media screen and (min-width: 630px) {
   .principal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-top: 9rem; }
     .principal ul li {
       font-size: 2rem;
       text-align: center;
       list-style: none;
-      color: #80203B; }
+      color: #000; }
     .principal .logo {
+      border-radius: 10px;
       display: block;
-      grid-column: span 1;
-      grid-row: span 1;
+      height: 25rem;
+      object-fit: cover;
+      margin-top: 3rem;
+      margin-left: 3rem; }
+  /* pag quiensoy pc */
+  .principal-dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .principal-dos .cocinera {
+      display: block;
+      border-radius: 10px;
+      height: 25rem;
+      object-fit: cover;
+      margin: 0 2rem 5rem; }
+    .principal-dos .texto {
+      display: inline;
+      text-align: center;
+      width: 40rem;
+      font-size: 1.2rem;
+      margin-left: 2rem;
+      color: #000; } }
+
+/* pag index pc */
+@media screen and (min-width: 1100px) {
+  .principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 9rem;
+    gap: 10%; }
+    .principal ul li {
+      font-size: 2rem;
+      text-align: center;
+      list-style: none;
+      color: #000; }
+    .principal .logo {
+      border-radius: 10px;
+      display: block;
       height: 25rem;
       object-fit: cover; }
   /* pag quiensoy pc */
   .principal-dos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
-    margin-top: 15vh; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
     .principal-dos .cocinera {
       display: block;
-      grid-column: span 1;
-      grid-row: span 1;
+      border-radius: 10px;
       height: 25rem;
       object-fit: cover;
-      margin-bottom: 2rem; }
+      margin: 0 2rem 5rem; }
     .principal-dos .texto {
-      display: grid;
-      font-size: 1.5rem;
-      padding-left: 8rem;
-      color: #80203B; }
+      display: inline;
+      text-align: center;
+      width: 40rem;
+      font-size: 1.2rem;
+      margin-left: 2rem;
+      color: #000; }
   /* pag menu pc */
   .menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
-    gap: 2rem;
+    gap: 1rem;
     height: 100vh; }
-    .menu .carta-cinco, .menu .carta-seis {
+    .menu .carta-cinco,
+    .menu .carta-seis {
       display: block;
       grid-column: span 1;
       grid-row: span 1; }
     .menu div {
-      height: 50rem;
-      width: 30rem; }
+      object-fit: cover;
+      height: 90%;
+      width: 60%; }
       .menu div img {
+        border-radius: 10px;
+        height: auto;
+        display: block;
         height: 100%;
         width: 100%;
+        max-width: 100%;
         object-fit: cover;
         margin-top: 1rem;
-        margin-bottom: 3rem; }
+        margin-bottom: 3.5rem; }
   /* pag galeria pc */
   .galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     place-items: center;
     gap: 1rem;
     height: 100vh; }
     .galeria div {
       object-fit: cover;
-      height: 50rem;
-      width: 30rem; }
+      height: 90%;
+      width: 60%; }
       .galeria div img {
         height: 100%;
         width: 100%;
+        max-width: 100%;
         object-fit: cover;
+        border-radius: 10px;
         margin-top: 1rem;
         margin-bottom: 3rem; }
   /* pag redes pc */
@@ -217,33 +266,36 @@ body {
     margin-top: 9rem; }
     .redes a {
       text-decoration: none;
-      color: #80203B;
+      color: #000;
       font-size: 2rem;
       margin-left: 30rem; }
     .redes img {
       display: block;
       grid-column: span 1;
       grid-row: span 1;
+      border-radius: 10px;
       object-fit: cover;
       height: 10rem;
       margin-right: 30rem; } }
 
 /* nav cel */
+.bg-spice {
+  background-color: #e4c5c4; }
+
 .nav-pc {
   display: none; }
 
 /* nav pc */
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1100px) {
   .nav-cel {
     display: none; }
   .nav-pc {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
-    top: 0;
+    padding: 10px 20px;
     z-index: 40000;
-    background-color: #F8F9FA; }
+    background-color: #e4c5c4; }
     .nav-pc ul {
       display: flex;
       list-style: none;
@@ -256,7 +308,7 @@ body {
           transition: all 0.5s; }
         .nav-pc ul li a {
           text-decoration: none;
-          color: #80203B; } }
+          color: #000; } }
 
 /* solo footer */
 footer {

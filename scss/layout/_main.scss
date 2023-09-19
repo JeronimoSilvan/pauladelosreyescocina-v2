@@ -1,10 +1,10 @@
-
 /* pag index celu */
 
-.logo{
+.logo {
     display: none;
-} 
-.principal{
+}
+
+.principal {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -13,231 +13,330 @@
     font-size: 1.2rem;
     margin-top: 15rem;
     margin-right: 2.5rem;
-         ul{
-            li{
-                list-style: none;
-                color: $second-color;
+
+    ul {
+        li {
+            list-style: none;
+            color: $second-color;
         }
-     }
+    }
 }
 
 /* pag quiensoy celu */
 
-.cocinera{
+.cocinera {
     display: none;
 }
-.principal-dos{
+
+.principal-dos {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     place-items: center;
     gap: 5rem;
     margin-top: 5rem;
-        .cocinera{
-            height: 20rem;
-    
+
+
+    .cocinera {
+        height: 20rem;
+
     }
-        .texto{
-            p{
-                margin-top: 1.2rem;
-                 margin-right: 2rem;
-                 margin-left: 2rem;
-                color: $second-color;
-        
+
+    .texto {
+        text-align: center;
+
+        p {
+            margin-top: 1.7rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
+            color: $second-color;
+
         }
     }
 }
 
 /* pagina menu celu */
 
-.menu{
+.menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
     gap: 1rem;
-        div{ 
-            height: 24rem;
-            width: 14rem;
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    margin-top: 1rem;   
-            }
-    }  
+
+    div {
+        height: 90%;
+        width: 60%;
+
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            margin-top: 2rem;
+        }
+    }
 
 }
-.carta-cinco, .carta-seis{
-display: none;
+
+.carta-cinco,
+.carta-seis {
+    display: none;
 }
 
 /* pagina galeria celu */
 
-.galeria{ 
+.galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
-    gap: 1rem;
-        div{
+    //gap: 1rem;
+
+    div {
+        object-fit: cover;
+        height: 80%;
+        width: 50%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 1rem;
             object-fit: cover;
-            height: 15rem;
-            width: 11rem;
-                img{
-                    height: 100%;
-                    width: 100%;
-                    margin-top: 1rem;
-                    object-fit: cover;
-            }
-    } 
-} 
+        }
+    }
+}
 
 /* pagina redes celu */
 
-.redes{
+.redes {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     place-items: center;
     gap: 15rem;
     margin-top: 7rem;
-        img{
-            display: none;
-    } 
-        a{
-            text-decoration: none;
-            color: $second-color;
-            font-size: 2rem;
-    }  
+
+    img {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $second-color;
+        font-size: 2rem;
+    }
 }
 
- /* pag index pc */
 
-@media screen and (min-width:990px){
+/* pag index tablet */
 
-    .principal{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        place-items: center;
+@media screen and (min-width: 630px) {
+    .principal {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         margin-top: 9rem;
-            ul{
-                li{
-                     font-size: 2rem;
-                    text-align: center;
-                    list-style: none;
-                    color: $second-color;
-             }
+        ul {
+            li {
+                font-size: 2rem;
+                text-align: center;
+                list-style: none;
+                color: $second-color;
+            }
         }
-            .logo{
-                display: block;
-                grid-column: span 1;
-                grid-row: span 1;
-                height: 25rem;
-                object-fit: cover;
-    
+
+        .logo {
+            border-radius: 10px;
+            display: block;
+            height: 25rem;
+            object-fit: cover;
+            margin-top: 3rem;
+            margin-left: 3rem;
         }
     }
 
- /* pag quiensoy pc */
+/* pag quiensoy pc */
 
-    .principal-dos{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        place-items: center;
-        margin-top: 15vh;
-            .cocinera{
-                display: block;
-                grid-column: span 1;
-                grid-row: span 1;
-                height: 25rem;
-                object-fit: cover;
-                margin-bottom: 2rem;
+.principal-dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .cocinera {
+        display: block;
+        border-radius: 10px;
+        height: 25rem;
+        object-fit: cover;
+        margin: 0 2rem 5rem;
+    }
+
+    .texto {
+        display: inline;
+        text-align: center;
+        width: 40rem;
+        font-size: 1.2rem;
+        margin-left: 2rem;
+        color: $second-color;
+
+
+
+    }
+}
+
+}
+
+
+
+
+
+
+
+/* pag index pc */
+
+@media screen and (min-width:1100px) {
+
+    .principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 9rem;
+        gap: 10%;
+
+        ul {
+            li {
+                font-size: 2rem;
+                text-align: center;
+                list-style: none;
+                color: $second-color;
+            }
         }
-            .texto{
-                display: grid;
-                font-size: 1.5rem;
-                padding-left: 8rem;
-                color: #80203B;
-        
+
+        .logo {
+            border-radius: 10px;
+            display: block;
+            height: 25rem;
+            object-fit: cover;
+        }
+    }
+
+    /* pag quiensoy pc */
+
+    .principal-dos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .cocinera {
+            display: block;
+            border-radius: 10px;
+            height: 25rem;
+            object-fit: cover;
+            margin: 0 2rem 5rem;
+        }
+
+        .texto {
+            display: inline;
+            text-align: center;
+            width: 40rem;
+            font-size: 1.2rem;
+            margin-left: 2rem;
+            color: $second-color;
+
+
+
         }
     }
 
     /* pag menu pc */
 
-    .menu{
+    .menu {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        place-items: center;
-        gap: 2rem;
-        height: 100vh;
-            .carta-cinco, .carta-seis{
-                display: block;
-                grid-column: span 1;
-                grid-row: span 1;
-        }
-            div{ 
-                height: 50rem;
-                width: 30rem;
-                img{
-                    @include contener;
-                    margin-top: 1rem;
-                    margin-bottom: 3rem;
-            }
-         }
-        
-    }
-
-/* pag galeria pc */
-    
-    .galeria{ 
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         place-items: center;
         gap: 1rem;
         height: 100vh;
-            div{
-                object-fit: cover;
-                height: 50rem;
-                width: 30rem;
-                    img{
-                        @include contener;
-                        margin-top: 1rem;
-                        margin-bottom: 3rem;
-                }
-            } 
-    } 
 
-/* pag redes pc */
 
-    .redes{
+        .carta-cinco,
+        .carta-seis {
+            display: block;
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        div {
+            object-fit: cover;
+            height: 90%;
+            width: 60%;
+
+            img {
+                border-radius: 10px;
+                height: auto;
+                display: block;
+                @include contener;
+                margin-top: 1rem;
+                margin-bottom: 3.5rem;
+            }
+        }
+
+    }
+
+    /* pag galeria pc */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        place-items: center;
+        gap: 1rem;
+        height: 100vh;
+
+        div {
+            object-fit: cover;
+            height: 90%;
+            width: 60%;
+
+            img {
+                @include contener;
+                border-radius: 10px;
+                margin-top: 1rem;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    /* pag redes pc */
+
+    .redes {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         place-items: center;
-        gap: 2rem; 
+        gap: 2rem;
         margin-top: 9rem;
-            a{
-                text-decoration: none;
-                color: $second-color;
-                font-size: 2rem;
-                margin-left: 30rem;
+
+        a {
+            text-decoration: none;
+            color: $second-color;
+            font-size: 2rem;
+            margin-left: 30rem;
         }
-            img{
-                display: block;
-                grid-column: span 1;
-                grid-row: span 1;
-                object-fit: cover;
-                height: 10rem;
-                margin-right: 30rem;
-        } 
+
+        img {
+            display: block;
+            grid-column: span 1;
+            grid-row: span 1;
+            border-radius: 10px;
+            object-fit: cover;
+            height: 10rem;
+            margin-right: 30rem;
+        }
     }
+
 }
-
-
-
