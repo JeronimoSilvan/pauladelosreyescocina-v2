@@ -1,11 +1,74 @@
-@mixin grid{ 
+@mixin grid {
     display: grid;
-    width: 100%;
-    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
 }
-@mixin contener{
+
+@mixin contener {
     height: 100%;
-    width:  100%;
+    width: 100%;
     max-width: 100%;
     object-fit: cover;
+}
+
+@mixin button {
+    background-color: $main-color;
+    color: $second-color;
+    border: 1px solid $second-color;
+}
+
+@mixin hover {
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+
+    }
+}
+
+@mixin images {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin colores {
+    background-color: $main-color;
+    color: $second-color;
+}
+
+@mixin border {
+    border: 1px solid $second-color
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin text {
+    display: inline;
+    text-align: center;
+    width: 40rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: $second-color;
+}
+
+@mixin estilo {
+    font-size: 2rem;
+    text-align: center;
+    list-style: none;
+    color: $second-color;
+}
+
+@mixin block-border {
+    display: block;
+    border-radius: 10px;
+}
+@mixin contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

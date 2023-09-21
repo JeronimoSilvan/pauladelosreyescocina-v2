@@ -70,10 +70,10 @@
 
 
         img {
-            height: 100%;
-            width: 100%;
+            @include images;
             object-fit: cover;
             margin-top: 2rem;
+            border-radius: 10px;
         }
     }
 
@@ -91,7 +91,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
-    //gap: 1rem;
 
     div {
         object-fit: cover;
@@ -99,57 +98,94 @@
         width: 50%;
 
         img {
-            height: 100%;
-            width: 100%;
-            margin-bottom: 1rem;
+            @include images;
+            margin-bottom: 2rem;
             object-fit: cover;
+            border-radius: 10px;
         }
     }
 }
 
-/* pagina redes celu */
+/* pagina contactame celu */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 10px auto 50px;
+
+    form {
+        @include colores;
+        padding: 25px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: left;
+        width: 100%;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            @include border;
+            border-radius: 5px;
+            font-size: 10px;
+        }
+
+        button {
+            @include colores;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
 
 .redes {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
-    gap: 15rem;
-    margin-top: 7rem;
-
-    img {
-        display: none;
-    }
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 
     a {
         text-decoration: none;
-        color: $second-color;
-        font-size: 2rem;
+        margin: 0 10px;
+
+    }
+
+    img {
+        max-width: 50px;
+        border-radius: 10px;
+
     }
 }
+
+
 
 
 /* pag index tablet */
 
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 600px) {
     .principal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        @include flex;
         margin-top: 9rem;
+
         ul {
             li {
-                font-size: 2rem;
-                text-align: center;
-                list-style: none;
-                color: $second-color;
+                @include estilo;
             }
         }
 
         .logo {
-            border-radius: 10px;
-            display: block;
+            @include block-border;
             height: 25rem;
             object-fit: cover;
             margin-top: 3rem;
@@ -157,67 +193,107 @@
         }
     }
 
-/* pag quiensoy pc */
+    /* pag quiensoy tablet */
 
-.principal-dos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    .principal-dos {
+        @include flex;
 
-    .cocinera {
-        display: block;
-        border-radius: 10px;
-        height: 25rem;
-        object-fit: cover;
-        margin: 0 2rem 5rem;
+        .cocinera {
+            border-radius: 10px;
+            display: block;
+            object-fit: cover;
+            height: 25rem;
+            margin: 0 2rem 5rem;
+        }
+
+        .texto {
+            @include text;
+        }
     }
 
-    .texto {
-        display: inline;
-        text-align: center;
-        width: 40rem;
-        font-size: 1.2rem;
-        margin-left: 2rem;
-        color: $second-color;
+    /* pag contactame tablet */
 
+    .contacto {
+        height: 90vh;
+        margin-top: 50px;
 
+        .formulario {
+            @include contacto;
+            max-width: 300px;
+            margin: 10px auto;
 
+            form {
+                padding: 25px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: $main-color;
+                border-radius: 5px;
+                text-align: left;
+                width: 100%;
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    @include border;
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+                    font-size: 10px;
+                }
+
+                button {
+                    @include button;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
     }
-}
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        a {
+            text-decoration: none;
+            margin: 0 10px;
+
+        }
+
+        img {
+            max-width: 50px;
+            border-radius: 10px;
+        }
+    }
 
 }
-
-
-
-
-
-
 
 /* pag index pc */
 
 @media screen and (min-width:1100px) {
 
     .principal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        @include flex;
         margin-top: 9rem;
         gap: 10%;
 
         ul {
             li {
-                font-size: 2rem;
-                text-align: center;
-                list-style: none;
-                color: $second-color;
+                @include estilo;
             }
         }
 
         .logo {
-            border-radius: 10px;
-            display: block;
+            @include block-border;
             height: 25rem;
             object-fit: cover;
         }
@@ -232,33 +308,21 @@
         flex-wrap: wrap;
 
         .cocinera {
-            display: block;
-            border-radius: 10px;
+            @include block-border;
             height: 25rem;
             object-fit: cover;
             margin: 0 2rem 5rem;
         }
 
         .texto {
-            display: inline;
-            text-align: center;
-            width: 40rem;
-            font-size: 1.2rem;
-            margin-left: 2rem;
-            color: $second-color;
-
-
-
+            @include text;
         }
     }
 
     /* pag menu pc */
 
     .menu {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        place-items: center;
+        @include grid;
         gap: 1rem;
         height: 100vh;
 
@@ -276,9 +340,9 @@
             width: 60%;
 
             img {
+                display: block;
                 border-radius: 10px;
                 height: auto;
-                display: block;
                 @include contener;
                 margin-top: 1rem;
                 margin-bottom: 3.5rem;
@@ -290,10 +354,7 @@
     /* pag galeria pc */
 
     .galeria {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        place-items: center;
+        @include grid;
         gap: 1rem;
         height: 100vh;
 
@@ -304,38 +365,77 @@
 
             img {
                 @include contener;
-                border-radius: 10px;
                 margin-top: 1rem;
                 margin-bottom: 3rem;
+                border-radius: 10px;
             }
         }
     }
 
-    /* pag redes pc */
+    /* pag contactame pc */
+
+    .contacto {
+        margin-top: 100px;
+
+        .formulario {
+            @include contacto;
+            max-width: 600px;
+            margin: 20px auto;
+
+            form {
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: $main-color;
+                //border-radius: 5px ;
+                text-align: left;
+                width: 100%;
+                max-width: 400px;
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 10px;
+                    @include border;
+                    border-radius: 5px;
+                    font-size: 14px;
+                }
+
+                button {
+                    @include button;
+                    padding: 10px 20px;
+                    @include border;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    @include hover;
+                }
+            }
+        }
+    }
 
     .redes {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        place-items: center;
-        gap: 2rem;
-        margin-top: 9rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
 
         a {
             text-decoration: none;
-            color: $second-color;
-            font-size: 2rem;
-            margin-left: 30rem;
+            margin: 0 10px;
+            @include hover;
         }
 
         img {
-            display: block;
-            grid-column: span 1;
-            grid-row: span 1;
+            max-width: 100px;
             border-radius: 10px;
-            object-fit: cover;
-            height: 10rem;
-            margin-right: 30rem;
         }
     }
 

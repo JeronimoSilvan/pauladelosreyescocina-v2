@@ -31,7 +31,7 @@
           <a class="nav-link active" aria-current="page" href="quiensoy.html">¿Quién soy?</a>
           <a class="nav-link" href="menu.html">Menú</a>
           <a class="nav-link" href="galeria.html">Galería</a>
-          <a class="nav-link" href="redes.html">Redes</a>
+          <a class="nav-link" href="contactame.html">Contactame</a>
         </div>
       </div>
     </div>
@@ -55,25 +55,45 @@
         <a href="galeria.html">Galería</a>
       </li>
       <li>
-        <a href="redes.html">Redes</a>
+        <a href="contactame.html">Contactame</a>
       </li>
     </ul>
   </nav>
+  <main class="contacto">
 
-  <main class="redes">
+    <div class="formulario">
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ejemplo: Juan">
+    
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required placeholder="Ejemplo: Pérez">
+    
+        <label for="email">Email (obligatorio):</label>
+        <input type="email" id="email" name="email" required placeholder="Ejemplo: ejemplo@correo.com">
+    
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="4" required></textarea>
+    
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
 
-    <a target="_blank" class="wsp-link"
-      href="https://api.whatsapp.com/send/?phone=5493424059838&text&type=phone_number&app_absent=0">WhatsApp</a>
 
-    <img class="wsp-img" src="../multimedia/Icono de WhatsApp.jpg" alt="WhatsApp">
+    <section class="redes">
 
+      <a target="_blank" class="wsp-link"
+        href="https://api.whatsapp.com/send/?phone=5493424059838&text&type=phone_number&app_absent=0">
+        <img class="wsp-img" src="../multimedia/Icono de WhatsApp.jpg" alt="WhatsApp">
+      </a>
 
-    <a target="_blank" class="ig-link" href="https://www.instagram.com/pauladelosreyescocina/">Instagram</a>
+      <a target="_blank" class="ig-link" href="https://www.instagram.com/pauladelosreyescocina/">
+        <img class="ig-icon" src="../multimedia/Instagram _ Icono Gratis.png" alt="Instagram">
+      </a>
 
-    <img class="ig-icon" src="../multimedia/Instagram _ Icono Gratis.png" alt="Instagram">
+    </section>
 
   </main>
-
 
 
   <footer>derechos de autor</footer>
