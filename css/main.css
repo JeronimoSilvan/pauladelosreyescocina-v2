@@ -82,7 +82,7 @@ body {
       margin-left: 2rem;
       color: #000; }
 
-/* pagina menu celu */
+/* pagina menu celu/tablet */
 .menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -103,7 +103,7 @@ body {
 .carta-seis {
   display: none; }
 
-/* pagina galeria celu */
+/* pagina galeria celu/tablet */
 .galeria {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -420,7 +420,7 @@ body {
       align-items: center; }
       .nav-pc ul li {
         margin: 0.2rem 5rem;
-        font-size: 1rem; }
+        font-size: 1.05rem; }
         .nav-pc ul li:hover {
           transform: scale(1.2);
           transition: all 0.5s; }
