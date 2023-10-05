@@ -151,7 +151,8 @@
 @media screen and (min-width: 600px) {
     .principal {
         @include flex;
-        margin-top: 9rem;
+        margin-top: 3rem;
+        justify-content: center;
 
         ul {
             li {
@@ -161,10 +162,10 @@
 
         .logo {
             @include block-border;
-            height: 25rem;
+            height: 20rem;
             object-fit: cover;
-            margin-top: 3rem;
-            margin-left: 3rem;
+            margin-top: 1rem;
+            margin-left: 1.5rem;
         }
     }
 
@@ -205,7 +206,7 @@
                 border-radius: 5px;
                 text-align: left;
                 width: 100%;
-                margin-top: 90px;
+                margin-top: 20px;
 
                 label {
                     display: block;
@@ -242,7 +243,7 @@
 
     .principal {
         @include flex;
-        margin-top: 9rem;
+        margin-top: 3rem;
         gap: 10%;
 
         ul {
@@ -253,7 +254,7 @@
 
         .logo {
             @include block-border;
-            height: 25rem;
+            height: 20rem;
             object-fit: cover;
         }
     }
@@ -333,12 +334,12 @@
     /* pag contactame pc */
 
     .contacto {
-        margin-top: 100px;
+        margin-top: 70px;
 
         .formulario {
             @include contacto;
             max-width: 600px;
-            margin: 20px auto;
+            margin: 15px auto;
 
             form {
                 padding: 20px;

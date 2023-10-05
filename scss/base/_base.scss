@@ -23,16 +23,11 @@ body {
         }
 
         h1 {
-            //font-size: 40px;
             margin: 0;
             @extend %color;
         }
     }
-
-
-
-/* MQ para el tamaño del h1 en celulares */
-
+    
 @media screen and (max-width: 450px) {
     h1 {
       font-size: 15px; 
